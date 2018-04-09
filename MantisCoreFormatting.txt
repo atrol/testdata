@@ -1,10 +1,12 @@
 # Test of Mantis core formatting plugin.
 
-Ensure that Markdown is enabled and all processings are set to on when testing
+Ensure that Markdown is enabled and all processing options are set to `On` when testing
 
 ## Test of Mantis internal text processing
 
+
 Issue link to existing issue, ensure that issue 1 exists or change the number when testing.
+
 ```
 #1
 ```
@@ -58,7 +60,7 @@ Issue link to non existing note, ensure that note 999999 does not exist or chang
 
 
 Usage of $g_html_valid_tags
-Test of Strong, the next line shoould just contain the word Strong styled using a bold font
+Test of strong, the line should just contain the word Strong styled using a bold font
 
 ```
 <strong>Strong</strong>
@@ -189,10 +191,25 @@ Check that the code starts with <?
 </book>
 ```
 
+Check that the code does not contains links for users, issues or notes.
+Ensure that user atrol, issue 1 and note 1 exist, or change user name, issue id and note id when testing
+ 
+```
+@atrol #1 ~1
+```
+
+Inline Code
 ```
 Inline `code` has `back-ticks around` it.
 ```
 Inline `code` has `back-ticks around` it.
+
+Check that the code does not contains links for users, issues or notes.
+Ensure that user atrol, issue 1 and note 1 exist, or change user name, issue id and note id when testing
+```
+Inline user `@atrol` issue `#1` note `~1`
+```
+Inline user `@atrol` issue `#1` note `~1`
 
 ---
 ### Tables
@@ -270,7 +287,7 @@ ___
 
 Underscores
 
-## XSS test
+### XSS tests
 
 When testing, disable all CSP headers (remove header() call in function http_csp_emit_header), or check the browser console for security messages.
 
