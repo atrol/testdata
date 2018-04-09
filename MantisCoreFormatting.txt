@@ -1,0 +1,276 @@
+# Test of Mantis core formatting plugin.
+
+Ensure that Markdown is enabled and all processings are set to on when testing
+
+## Test of Mantis internal text processing
+
+Issue link to existing issue, ensure that issue 1 exists or change the number when testing.
+```
+#1
+```
+
+#1
+
+
+Issue link to non existing issue, ensure that issue 999999 does not exist or change the number when testing.
+
+```
+#999999
+```
+
+#999999
+
+
+Issue link to existing note, ensure that note 1 exists or change the number when testing.
+
+```
+~1
+```
+
+~1
+
+
+Issue link to non existing note, ensure that note 999999 does not exist or change the number when testing.
+
+```
+~999999
+```
+
+~999999
+
+
+@ mention test of existing user, ensure that user atrol does exist or change the name when testing.
+
+```
+@atrol
+```
+
+@atrol
+
+
+@ mention test of non existing user, ensure that user iamnotthere does not exist or change the name when testing.
+
+```
+@iamnotthere
+```
+
+@iamnotthere
+
+
+Usage of $g_html_valid_tags
+Test of Strong, the next line shoould just contain the word Strong styled using a bold font
+
+```
+<strong>Strong</strong>
+```
+
+<strong>Strong</strong>
+
+
+Link
+
+```
+https://www.mantisbt.org/bugs
+```
+
+https://www.mantisbt.org/bugs
+
+
+## Test of some basic Markdown constructs
+
+Inspired by https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+
+### Headers
+```
+# H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+
+Alternatively, for H1 and H2, an underline-ish style:
+
+Alt-H1
+======
+
+Alt-H2
+------
+```
+# H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+
+Alternatively, for H1 and H2, an underline-ish style:
+
+Alt-H1
+======
+
+Alt-H2
+------
+---
+
+### Emphasis
+```
+Emphasis, aka italics, with *asterisks* or _underscores_.
+```
+Emphasis, aka italics, with *asterisks* or _underscores_.
+
+```
+Strong emphasis, aka bold, with **asterisks** or __underscores__.
+```
+Strong emphasis, aka bold, with **asterisks** or __underscores__.
+
+```
+Combined emphasis with **asterisks and _underscores_**.
+```
+Combined emphasis with **asterisks and _underscores_**.
+
+
+```
+Strikethrough uses two tildes. ~~Scratch this.~~
+```
+Strikethrough uses two tildes. ~~Scratch this.~~
+
+---
+### Lists
+(In this example, leading and trailing spaces are shown with dots)
+```
+1. First ordered list item
+1. Second ordered list item, actual numbers don't matter, just that it's a number 
+..* Unordered sub-list
+..* Unordered sub-list
+1. Third ordered list item
+..1. Ordered sub-list item
+..1. Ordered sub-list item
+1. And another item.
+```
+
+1. First ordered list item
+1. Second ordered list item, actual numbers don't matter, just that it's a number 
+  * Unordered sub-list
+  * Unordered sub-list
+1. Third ordered list item
+  1. Ordered sub-list item
+  1. Ordered sub-list item
+1. And another item.
+
+---
+### Links
+```
+[I'm an inline-style link to Mantis](https://www.mantisbt.org)
+```
+[I'm an inline-style link to Mantis](https://www.mantisbt.org)
+
+---
+
+### Code
+
+Blocks of code are fenced by lines with three back-ticks  ```
+
+Check that the code starts with <?
+```
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Admin_Guide.ent">
+%BOOK_ENTITIES;
+]>
+<book>
+	<xi:include href="Book_Info.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	<!-- TODO Add common preface stuff, possibly adapting the default one
+        <xi:include href="Preface.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+        -->
+	<xi:include href="About.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	<xi:include href="Installation.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	<xi:include href="Revision_History.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+</book>
+```
+
+```
+Inline `code` has `back-ticks around` it.
+```
+Inline `code` has `back-ticks around` it.
+
+---
+### Tables
+
+Simple Table
+
+```
+Col1 | Col2 | Col3
+---- | ---- | ----
+Row1 | Row1 | Row1
+Row2 | Row2 | Row2
+```
+
+Col1 | Col2 | Col3
+---- | ---- | ----
+Row1 | Row1 | Row1
+Row2 | Row2 | Row2
+
+
+Colons can be used to align columns.
+```
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+```
+
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+
+The outer pipes (|) are optional, and you don't need to make the raw Markdown line up prettily.
+
+---
+### Blockquotes
+ensure that issue 777 exists. For details see https://www.mantisbt.org/bugs/view.php?id=24233#c59476
+
+```
+> Blockquotes are very handy in email to emulate reply text.
+> This line is part of the same quote.
+```
+> Blockquotes are very handy in email to emulate reply text.
+> This line is part of the same quote.
+
+---
+### Horizontal Rule
+```
+Three or more...
+
+---
+
+Hyphens
+
+***
+
+Asterisks
+
+___
+
+Underscores
+```
+Three or more...
+
+---
+
+Hyphens
+
+***
+
+Asterisks
+
+___
+
+Underscores
+
+## XSS test
+
+When testing, disable all CSP headers (remove header() call in function http_csp_emit_header), or check the browser console for security messages.
+
