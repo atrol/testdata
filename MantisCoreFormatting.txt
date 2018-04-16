@@ -78,6 +78,15 @@ https://www.mantisbt.org/bugs
 https://www.mantisbt.org/bugs
 
 
+Email
+
+```
+noreply@mantisbt.org
+```
+
+noreply@mantisbt.org
+
+
 ## Test of some basic Markdown constructs
 
 Inspired by https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
@@ -191,11 +200,11 @@ Check that the code starts with <?
 </book>
 ```
 
-Check that the code does not contains links for users, issues or notes.
+Check that the code does not contains links for users, issues, notes or e-mail addresses.
 Ensure that user atrol, issue 1 and note 1 exist, or change user name, issue id and note id when testing
  
 ```
-@atrol #1 ~1
+@atrol #1 ~1 noreply@mantisbt.org
 ```
 
 Inline Code
@@ -204,12 +213,12 @@ Inline `code` has `back-ticks around` it.
 ```
 Inline `code` has `back-ticks around` it.
 
-Check that the code does not contains links for users, issues or notes.
+Check that the code does not contains links for users, issues, notes or e-mail addresses.
 Ensure that user atrol, issue 1 and note 1 exist, or change user name, issue id and note id when testing
 ```
-Inline user `@atrol` issue `#1` note `~1`
+Inline user `@atrol` issue `#1` note `~1` e-mail `noreply@mantisbt.org`
 ```
-Inline user `@atrol` issue `#1` note `~1`
+Inline user `@atrol` issue `#1` note `~1` e-mail `noreply@mantisbt.org`
 
 ---
 ### Tables
