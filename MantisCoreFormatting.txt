@@ -41,13 +41,13 @@ Issue link to non existing note, ensure that note 999999 does not exist or chang
 ~999999
 
 
-@ mention test of existing user, ensure that user atrol does exist or change the name when testing.
+@ mention test of existing user, ensure that user administrator does exist or change the name when testing.
 
 ```
-@atrol
+@administrator
 ```
 
-@atrol
+@administrator
 
 
 @ mention test of non existing user, ensure that user iamnotthere does not exist or change the name when testing.
@@ -201,10 +201,10 @@ Check that the code starts with <?
 ```
 
 Check that the code does not contains links for users, issues, notes or e-mail addresses.
-Ensure that user atrol, issue 1 and note 1 exist, or change user name, issue id and note id when testing
+Ensure that user administrator, issue 1 and note 1 exist, or change user name, issue id and note id when testing
  
 ```
-@atrol #1 ~1 noreply@mantisbt.org
+@administrator #1 ~1 noreply@mantisbt.org
 ```
 
 Inline Code
@@ -214,11 +214,11 @@ Inline `code` has `back-ticks around` it.
 Inline `code` has `back-ticks around` it.
 
 Check that the code does not contains links for users, issues, notes or e-mail addresses.
-Ensure that user atrol, issue 1 and note 1 exist, or change user name, issue id and note id when testing
+Ensure that user administrator, issue 1 and note 1 exist, or change user name, issue id and note id when testing
 ```
-Inline user `@atrol` issue `#1` note `~1` e-mail `noreply@mantisbt.org`
+Inline user `@administrator` issue `#1` note `~1` e-mail `noreply@mantisbt.org`
 ```
-Inline user `@atrol` issue `#1` note `~1` e-mail `noreply@mantisbt.org`
+Inline user `@administrator` issue `#1` note `~1` e-mail `noreply@mantisbt.org`
 
 ---
 ### Tables
